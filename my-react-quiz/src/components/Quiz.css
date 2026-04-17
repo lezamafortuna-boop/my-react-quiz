@@ -1,0 +1,22 @@
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #8bdc6d;
+  border-radius: 10px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.correctAnswer {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+  padding-left: 6px;
+  border-radius: 4px;
+}
