@@ -1,0 +1,16 @@
+name: Label PR on Open
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add-review-label:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR_URL: ${{ github.event.pull_request.html_url }}
+
+    steps:
+      - name: Add "review" label to PR
+        run: gh pr edit "$PR_URL" --add-label "review"
